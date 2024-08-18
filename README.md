@@ -15,6 +15,7 @@ Deep Learning Model for Differentiating Between Neoplastic Pathologic Fracture a
 
 ## Step 1: 5 Fold Cross validation
 * You can perform 5-fold cross validation using the below code (Example)
+
 '''
 python main.py --save_dir /home/seob/PathFxDx/result --rootdir <path to data_root_dir> --clinical_data <path to clinical data> --batch_size 32 --epoch 100 --lr 1e-3 --weight_decay 1e-3 --cuda cuda:0 --FF_number 5 --dataset Dual  --cross_val --save
 '''
