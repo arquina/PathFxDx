@@ -244,7 +244,7 @@ app.title('PathFxDx')
 app.geometry("1440x1024")
 app.configure(bg="#FFFFFF")
 
-filename = PhotoImage(file = "./GUI_Image/PathFxDx_GUI_v4.png")
+filename = PhotoImage(file = "./GUI_image/PathFxDx_GUI_v4.png")
 background_label = Label(app, image=filename)
 background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
@@ -253,7 +253,7 @@ Button(app, text="Condition select", font="arial 18 bold", command=open_popup, b
 Button(app, text="Preprocess", font="arial 18 bold", command=open_and_process_file, bg = '#f2f6f2', highlightthickness = 0, bd = 0).place(x=1067, y = 411, width = 312, height = 50)
 Button(app, text="Select site", font="arial 18 bold", command=fracture_dection, bg = '#f2f6f2', highlightthickness = 0, bd = 0).place(x=1067, y = 493, width = 312, height = 50)
 
-image = Image.open("./GUI_Image/playbutton.png")
+image = Image.open("./GUI_image/playbutton.png")
 width, height = image.size
 width_1 = int(width * 0.8)
 height_1 = int(height * 0.8)
