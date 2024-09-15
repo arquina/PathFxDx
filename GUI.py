@@ -108,9 +108,10 @@ def open_and_process_file():
         y_size = original_img_size[1]
         half_size = int(x_size / 2)
         if orientation_var.get() == 'Right':
-            original_image = original_image.crop((half_size, 0, x_size, y_size))
-        elif orientation_var.get() == 'Left':
             original_image = original_image.crop((0, 0, half_size, y_size))
+            original_image = ImageOps.mirror(original_image)
+        elif orientation_var.get() == 'Left':
+            original_image = original_image.crop((half_size, 0, x_size, y_size))
     elif image_size_var.get() == 'Half':
         if orientation_var.get() == "Right":
             original_image = ImageOps.mirror(original_image)
@@ -185,7 +186,7 @@ def model_processing():
     print(model_type_var.get())
     if model_type_var.get() == 'Original':
         model_path = "./Trained_Model/Original_model.pt"
-        threshold = 0.
+        threshold = 0.11275
         sensitivity = 0.309
         specificity = 0.925
     elif model_type_var.get() == 'Fracture':
@@ -195,7 +196,7 @@ def model_processing():
         specificity = 0.860
     elif model_type_var.get() == 'Dual':
         model_path = "./Trained_Model/Dual_model.pt"
-        threshold = 0.199293
+        threshold = 0.199967
         sensitivity = 0.910
         specificity = 0.786
 
