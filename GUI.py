@@ -26,15 +26,15 @@ def process_image(img, image_type):
         transform = transforms.Compose([
             transforms.Resize((224, 224)),
             transforms.ToTensor(),
-            transforms.Normalize(mean=[0.5575, 0.5575, 0.5575],
-                                 std=[0.2249, 0.2249, 0.2249])
+            transforms.Normalize(mean=[0.6194, 0.6194, 0.6194],
+                                 std=[0.1335, 0.1335, 0.1335])
         ])
     elif image_type == 'Original':
         transform = transforms.Compose([
             transforms.Resize((224, 224)),
             transforms.ToTensor(),
-            transforms.Normalize(mean=[0.3865, 0.3865, 0.3865],
-                                 std=[0.2697, 0.2697, 0.2697])
+            transforms.Normalize(mean=[0.4295, 0.4295, 0.4295],
+                                 std=[0.2342, 0.2342, 0.2342])
         ])
     return transform(img)
 
