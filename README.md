@@ -24,7 +24,7 @@ python main.py --rootdir <path to data_root_dir> --clinical_data <path to clinic
 * You can train your own model using train/ test/ external_test data using the below code (Example)
 
 ```
-python main.py --save_dir /home/seob/PathFxDx/result --rootdir <path to data_root_dir> --clinical_data <path to clinical data> --batch_size 32 --epoch 100 --lr 1e-3 --weight_decay 1e-3 --cuda cuda:0 --dataset Dual --train_hospital <Name of train data's hospital> --test_hospital <Name of test data's hospital> --save --save_dir <path you want to save the result>
+python main.py --save_dir <path to save_dir> --rootdir <path to data_root_dir> --clinical_data <path to clinical data> --batch_size 32 --epoch 100 --lr 1e-3 --weight_decay 1e-3 --cuda cuda:0 --dataset Dual --train_hospital <Name of train data's hospital> --test_hospital <Name of test data's hospital> --save --save_dir <path you want to save the result>
 ```
 
 ## Step 3: Analyze the 5 fold cross validation result & Final model result
