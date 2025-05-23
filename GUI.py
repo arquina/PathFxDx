@@ -192,8 +192,8 @@ def model_processing():
     elif model_type_var.get() == 'Fracture':
         model_path = "./Trained_Model/Fracture_model.pt"
         threshold = 0.327566
-        sensitivity = 0.687
-        specificity = 0.860
+        sensitivity = 0.860
+        specificity = 0.687
     elif model_type_var.get() == 'Dual':
         model_path = "./Trained_Model/Dual_model.pt"
         threshold = 0.199967
